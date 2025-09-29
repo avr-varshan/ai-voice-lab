@@ -1,4 +1,4 @@
-# 🗣️ VoiceLab – End-to-End, Self-Hosted Voice-AI Studio
+# 🗣️ VoiceLab 
 
 **Generate natural speech and morph voices entirely under your control—data never leaves your stack.**
 
