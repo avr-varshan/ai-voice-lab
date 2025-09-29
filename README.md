@@ -8,7 +8,6 @@ VoiceLab is a full-stack template that lets you reproduce the core workflow of c
 - **StyleTTS2** – high-fidelity text-to-speech
 - **Seed-VC** – zero-shot + custom voice-to-voice conversion
 
-Everything ships in Docker, runs on one GPU box, and stores artefacts in S3 via presigned URLs. The stack has been validated with a 90-minute single-speaker corpus (Jasmine's tutorial videos) and produces broadcast-quality audio.
 
 -----
 
@@ -29,7 +28,6 @@ Everything ships in Docker, runs on one GPU box, and stores artefacts in S3 via 
 | Frontend | Next.js 15 - React 18 - Tailwind - Auth.js | Auth, credit ledger, playback UI |
 | Storage | AWS S3 (presigned GET/PUT) | Stateless blob store for wavs + models |
 | Container Registry | AWS ECR | model training |
-| Secrets | Parameter Store / .env | Injected at launch via docker-compose |
 
 -----
 
@@ -41,7 +39,6 @@ Everything ships in Docker, runs on one GPU box, and stores artefacts in S3 via 
 | Auto-segment | VAD + silence script | 1–10 s clips |
 | Transcribe | Whisper large-v3 | JSON + manual fixes |
 | Clean audio | Audacity | Noise-free clips |
-| Package data | Python scripts | - StyleTTS2 CSV<br>- Seed-VC folders |
 | Train | Docker + PyTorch Lightning on EC2 G5 | `*.pth` checkpoints to S3 |
 
 
@@ -70,9 +67,7 @@ All compute, storage, and authentication reside in your AWS account—**no third
 | 🤖 Model Fine-tuning | Docker + PyTorch Lightning on EC2 G5 Spot |
 | 🐳 Model Containerization | Docker + FastAPI endpoints |
 | ✅ Authentication | Auth.js (NextAuth) with JWT sessions |
-| 🔄 Background Processing | Inngest queue system |
 | 📁 Audio Storage | AWS S3 with presigned URLs |
-| 💾 Credit Management | Built-in usage tracking system |
 | 📱 Responsive UI | Next.js + Tailwind + T3 Stack |
 
 -----
