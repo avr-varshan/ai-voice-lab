@@ -1,0 +1,37 @@
+python inference.py --source ./examples/source/anju.wav
+--target ./examples/reference/jas.wav
+--output ./reconstructed
+--diffusion-steps 35 
+--length-adjust 1.0
+--inference-cfg-rate 0.7
+--f0-condition True
+--auto-f0-adjust False 
+--semi-tone-shift 0 
+--checkpoint ./runs/training_run/ft_model.pth
+--config ./configs/presets/config_dit_mel_seed_uvit_whisper_base_f0_44k.yml
+ --fp16 True
+
+
+python inference.py --source ./examples/source/1.wav --target ./examples/reference/jas.wav --output ./reconstructed --diffusion-steps 35 --length-adjust 1.0 --inference-cfg-rate 0.7 --f0-condition True --auto-f0-adjust False --semi-tone-shift 0 --checkpoint ./runs/training_run/ft_model.pth --config ./configs/presets/config_dit_mel_seed_uvit_whisper_base_f0_44k.yml --fp16 True
+
+
+ For fine-tuning, it should be one of the following:
+./configs/presets/config_dit_mel_seed_uvit_xlsr_tiny.yml for real-time voice conversion
+./configs/presets/config_dit_mel_seed_uvit_whisper_small_wavenet.yml for offline voice conversion
+./configs/presets/config_dit_mel_seed_uvit_whisper_base_f0_44k.yml for singing voice conversion
+
+
+
+curl -X GET http://localhost:8000/health \
+  -H "Authorization: Bearer 12345"
+
+curl -X GET http://localhost:8000/voices \
+  -H "Authorization: Bearer 12345"
+
+curl -X POST http://localhost:8000/convert \
+  -H "Authorization: Bearer 12345" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "source_audio_key": "seedvc-audio-uploads/source_s2.wav",
+        "target_voice": "jasmine"
+      }'

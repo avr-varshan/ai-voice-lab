@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual envs
+venv/
+.env
+.venv/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Large generated / model files
+StyleTTS2/epoch_*.pth
+StyleTTS2/output*.wav
+StyleTTS2/reference_audio/
+StyleTTS2/Models/
+StyleTTS2/Data/
+StyleTTS2/Demo/
+
+seed-vc/checkpoints/
+seed-vc/dataset/
+seed-vc/data/
+seed-vc/reconstructed/
+seed-vc/runs/
+seed-vc/assets/
+
+# Ignore fine-tune completely
+StyleTTS2FineTune/

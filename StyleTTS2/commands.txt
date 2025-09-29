@@ -1,0 +1,20 @@
+curl -X GET "http://localhost:8000/health" -H "Authorization: 12345" 
+
+curl -X GET "http://localhost:8000/voices" -H "Authorization: 12345" 
+
+curl -X POST "http://localhost:8000/generate" -H "Authorization: 12345" -H "Content-Type: application/json" -d '{"text":"This is my sample audio","target_voice":"Jasmine"}'
+
+
+
+python inference_v2.py --source ./examples/source/source_s1.wav
+--target ./examples/reference/s1p1.wav
+--output ./reconstructed
+--diffusion-steps 25 
+--length-adjust 1.0 
+--intelligibility-cfg-rate 0.7 
+--similarity-cfg-rate 0.7 
+--convert-style true 
+--anonymization-only false 
+--top-p 0.9 
+--temperature 1.0 
+--repetition-penalty 1.0 
