@@ -1,6 +1,6 @@
 # 🗣️ VoiceLab 
 
-**Generate natural speech and morph voices entirely under your control—data never leaves your stack.**
+**Transform text into natural speech and convert voices seamlessly—with full precision and unmatched flexibility.**
 
 VoiceLab is a full-stack template that lets you reproduce the core workflow of commercial voice platforms—**entirely on your own infrastructure**. It couples two open-source neural speech models with a hardened cloud pipeline so you can (a) fine-tune new voices quickly and (b) serve high-throughput inference behind a single FastAPI gateway.
 
