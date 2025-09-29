@@ -8,7 +8,7 @@ VoiceLab is a full-stack template that lets you reproduce the core workflow of c
 - **StyleTTS2** – high-fidelity text-to-speech
 - **Seed-VC** – zero-shot + custom voice-to-voice conversion
 
-Both StyleTTS2 and Seed-VC were fine-tuned on my friend Jasmine's 90-minute voice corpus, giving VoiceLab a fully custom voice that sounds indistinguishable from the original speaker.
+Both StyleTTS2 and Seed-VC were fine-tuned on a personally collected 90-minute voice dataset, resulting in a fully custom voice that sounds nearly identical to the source speaker.
 
 -----
 
