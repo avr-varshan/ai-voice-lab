@@ -15,7 +15,7 @@ Both StyleTTS2 and Seed-VC were fine-tuned on our 90-minute Jasmine voice corpus
 ## 📺 Demo
 
 
-👉 
+👉 Click on the image to see demo of Application
 [![Watch the Demo](resources/thumbnail.png)](https://youtu.be/kNtJwR2FdPY?si=z1pIu_HMxelqsXgL)
 
 ---
