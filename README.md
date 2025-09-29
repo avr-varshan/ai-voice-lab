@@ -202,8 +202,6 @@ API_KEY=your-api-key
 
 *Voice cloning was done with full consent and for educational/demonstration purposes.*
 
-**Model research:** StyleTTS2, Seed-VC communities.  
-**Development & architecture:** Varshan A V R
 
 -----
 
