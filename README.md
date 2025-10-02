@@ -136,7 +136,6 @@ AUTH_SECRET=your-super-secret-key
 # Local API endpoints
 NEXT_PUBLIC_TTS_API=http://localhost:8000
 NEXT_PUBLIC_VC_API=http://localhost:8001
-NEXT_PUBLIC_SFX_API=http://localhost:8002
 ```
 
 ### Backend APIs
